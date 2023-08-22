@@ -41,8 +41,6 @@ public class Drawer {
 
         for(int trow = rectangle.getRow(); trow < rectangle.getRow() + rectangle.getHeight(); ++trow) {
             for(int tcol = rectangle.getCol(); tcol < rectangle.getCol() + rectangle.getWidth(); ++tcol) {
-                int theameIndex =0;
-//                canvas.getCanvas()[trow][tcol] = TreeColour.getTrunckColour(theameIndex);
                 canvas.getCanvas()[trow][tcol] = rectangle.getColour();
 
             }
@@ -59,8 +57,7 @@ public class Drawer {
                 double offset = (double)t * 0.5;
                 int lcol = (int)Math.round((double) line.getCol() + (double)i * Math.cos(radians) + offset * Math.sin(radians));
                 int lrow = (int)Math.round((double) line.getRow() + (double)i * Math.sin(radians) - offset * Math.cos(radians));
-                int theameIndex = 0;
-//                canvas.getCanvas()[lrow][lcol] = TreeColour.getBranchColour(theameIndex);
+
                 canvas.getCanvas()[lrow][lcol] = line.getColour();
             }
         }

@@ -21,46 +21,46 @@ public class TreeBuilder {
             return leaf1;
         }
 
-        public Tree buildTree(int themeIndex) {
+        public Tree buildTree(String trunkColour, String branchColour, String leafCoour1, String leafColour2) {
             Tree tree = new Tree();
-            tree.addTrunk(this.buildTrunk(18, 26, 0,TreeColour.getTrunckColour(themeIndex)));
+            tree.addTrunk(this.buildTrunk(18, 26, 0,trunkColour));
 
-            tree.addBranch(this.buildBranch(14, 9, 30, 3, 15, 1,TreeColour.getBranchColour(themeIndex)));
-            tree.addBranch(this.buildBranch(35, 10, 150, 3, 10, 2, TreeColour.getBranchColour(themeIndex)));
-            tree.addBranch(this.buildBranch(35, 10, 30, 3, 4, 3,TreeColour.getBranchColour(themeIndex)));
-            tree.addBranch(this.buildBranch(43, 12, 150, 3, 10, 0,TreeColour.getBranchColour(themeIndex)));
+            tree.addBranch(this.buildBranch(14, 9, 30, 3, 15, 1,branchColour));
+            tree.addBranch(this.buildBranch(35, 10, 150, 3, 10, 2, branchColour));
+            tree.addBranch(this.buildBranch(35, 10, 30, 3, 4, 3,branchColour));
+            tree.addBranch(this.buildBranch(43, 12, 150, 3, 10, 0,branchColour));
 
-            tree.addLeaf(this.buildLeaf(12, 8, 0, TreeColour.getLeavesColourOne(themeIndex)));
-            tree.addLeaf(this.buildLeaf(16, 6, 1,TreeColour.getLeavesColourTwo(themeIndex)));
-            tree.addLeaf(this.buildLeaf(17, 10, 2, TreeColour.getLeavesColourOne(themeIndex)));
-            tree.addLeaf(this.buildLeaf(22, 11, 3,TreeColour.getLeavesColourTwo(themeIndex)));
-            tree.addLeaf(this.buildLeaf(21, 7, 3,TreeColour.getLeavesColourTwo(themeIndex)));
-            tree.addLeaf(this.buildLeaf(23, 5, 1,TreeColour.getLeavesColourTwo(themeIndex)));
-            tree.addLeaf(this.buildLeaf(17, 14, 0, TreeColour.getLeavesColourOne(themeIndex)));
-            tree.addLeaf(this.buildLeaf(11, 15, 1,TreeColour.getLeavesColourTwo(themeIndex)));
-            tree.addLeaf(this.buildLeaf(18, 18, 2, TreeColour.getLeavesColourOne(themeIndex)));
-            tree.addLeaf(this.buildLeaf(40, 18, 3, TreeColour.getLeavesColourOne(themeIndex)));
-            tree.addLeaf(this.buildLeaf(9, 11,0, TreeColour.getLeavesColourOne(themeIndex)));
-            tree.addLeaf(this.buildLeaf(28, 15, 1,TreeColour.getLeavesColourTwo(themeIndex)));
-            tree.addLeaf(this.buildLeaf(36, 16, 2, TreeColour.getLeavesColourOne(themeIndex)));
-            tree.addLeaf(this.buildLeaf(39, 12, 3,TreeColour.getLeavesColourTwo(themeIndex)));
-            tree.addLeaf(this.buildLeaf(33, 16, 0, TreeColour.getLeavesColourOne(themeIndex)));
-            tree.addLeaf(this.buildLeaf(27, 12, 1,TreeColour.getLeavesColourTwo(themeIndex)));
-            tree.addLeaf(this.buildLeaf(33, 12, 2,TreeColour.getLeavesColourOne(themeIndex)));
-            tree.addLeaf(this.buildLeaf(30, 9, 3,TreeColour.getLeavesColourTwo(themeIndex)));
-            tree.addLeaf(this.buildLeaf(35, 7, 0,TreeColour.getLeavesColourOne(themeIndex)));
-            tree.addLeaf(this.buildLeaf(39, 8, 1,TreeColour.getLeavesColourTwo(themeIndex)));
-            tree.addLeaf(this.buildLeaf(39, 6, 2,TreeColour.getLeavesColourOne(themeIndex)));
-            tree.addLeaf(this.buildLeaf(32, 6, 3,TreeColour.getLeavesColourTwo(themeIndex)));
-            tree.addLeaf(this.buildLeaf(27, 6, 0,TreeColour.getLeavesColourOne(themeIndex)));
-            tree.addLeaf(this.buildLeaf(44, 10, 1,TreeColour.getLeavesColourTwo(themeIndex)));
-            tree.addLeaf(this.buildLeaf(47, 12, 2,TreeColour.getLeavesColourOne(themeIndex)));
-            tree.addLeaf(this.buildLeaf(47, 16, 3,TreeColour.getLeavesColourTwo(themeIndex)));
-            tree.addLeaf(this.buildLeaf(49, 8, 0,TreeColour.getLeavesColourOne(themeIndex)));
-            tree.addLeaf(this.buildLeaf(44, 6, 1,TreeColour.getLeavesColourTwo(themeIndex)));
-            tree.addLeaf(this.buildLeaf(44, 15, 2,TreeColour.getLeavesColourOne(themeIndex)));
-            tree.addLeaf(this.buildLeaf(25, 18, 3,TreeColour.getLeavesColourTwo(themeIndex)));
-            tree.addLeaf(this.buildLeaf(20, 16, 3,TreeColour.getLeavesColourTwo(themeIndex)));
+            tree.addLeaf(this.buildLeaf(12, 8, 0, leafCoour1));
+            tree.addLeaf(this.buildLeaf(16, 6, 1,leafColour2));
+            tree.addLeaf(this.buildLeaf(17, 10, 2, leafCoour1));
+            tree.addLeaf(this.buildLeaf(22, 11, 3,leafColour2));
+            tree.addLeaf(this.buildLeaf(21, 7, 3,leafColour2));
+            tree.addLeaf(this.buildLeaf(23, 5, 1,leafColour2));
+            tree.addLeaf(this.buildLeaf(17, 14, 0,leafCoour1));
+            tree.addLeaf(this.buildLeaf(11, 15, 1,leafColour2));
+            tree.addLeaf(this.buildLeaf(18, 18, 2, leafCoour1));
+            tree.addLeaf(this.buildLeaf(40, 18, 3, leafCoour1));
+            tree.addLeaf(this.buildLeaf(9, 11,0, leafCoour1));
+            tree.addLeaf(this.buildLeaf(28, 15, 1,leafColour2));
+            tree.addLeaf(this.buildLeaf(36, 16, 2,leafCoour1));
+            tree.addLeaf(this.buildLeaf(39, 12, 3,leafColour2));
+            tree.addLeaf(this.buildLeaf(33, 16, 0, leafCoour1));
+            tree.addLeaf(this.buildLeaf(27, 12, 1,leafColour2));
+            tree.addLeaf(this.buildLeaf(33, 12, 2,leafCoour1));
+            tree.addLeaf(this.buildLeaf(30, 9, 3,leafColour2));
+            tree.addLeaf(this.buildLeaf(35, 7, 0,leafCoour1));
+            tree.addLeaf(this.buildLeaf(39, 8, 1,leafColour2));
+            tree.addLeaf(this.buildLeaf(39, 6, 2,leafCoour1));
+            tree.addLeaf(this.buildLeaf(32, 6, 3,leafColour2));
+            tree.addLeaf(this.buildLeaf(27, 6, 0,leafCoour1));
+            tree.addLeaf(this.buildLeaf(44, 10, 1,leafColour2));
+            tree.addLeaf(this.buildLeaf(47, 12, 2,leafCoour1));
+            tree.addLeaf(this.buildLeaf(47, 16, 3,leafColour2));
+            tree.addLeaf(this.buildLeaf(49, 8, 0,leafCoour1));
+            tree.addLeaf(this.buildLeaf(44, 6, 1,leafColour2));
+            tree.addLeaf(this.buildLeaf(44, 15, 2,leafCoour1));
+            tree.addLeaf(this.buildLeaf(25, 18, 3,leafColour2));
+            tree.addLeaf(this.buildLeaf(20, 16, 3,leafColour2));
             return tree;
         }
 

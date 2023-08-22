@@ -27,23 +27,23 @@ public class PersonBuilder {
         return  crescent;
 
     }
-    public Person buildPerson(int theameIndex){
+    public Person buildPerson(String faceColour, String eyeColour, String bodyColour){
         Person person = new Person();
 
 //        person.addBody(this.buildBody(10,18,1));
-        person.addBody(this.buildBody(15,19,1, PersonColour.getPersonFaceColor(theameIndex)));
+        person.addBody(this.buildBody(15,19,1, bodyColour));
 
-        person.addlimbs(this.buildLimb(14,12,30,1,5,1,PersonColour.getPersonBodyColour(theameIndex)));
-        person.addlimbs(this.buildLimb(28,15,320,1,5,1,PersonColour.getPersonBodyColour(theameIndex)));
-        person.addlimbs(this.buildLimb(19,24,150,1,5,1,PersonColour.getPersonBodyColour(theameIndex)));
-        person.addlimbs(this.buildLimb(30,27,220,1,5,1,PersonColour.getPersonBodyColour(theameIndex)));
-        person.addlimbs(this.buildLimb(23,13,90,1,1,1,PersonColour.getPersonBodyColour(theameIndex)));
+        person.addlimbs(this.buildLimb(14,12,30,1,5,1,bodyColour));
+        person.addlimbs(this.buildLimb(28,15,320,1,5,1,bodyColour));
+        person.addlimbs(this.buildLimb(19,24,150,1,5,1,bodyColour));
+        person.addlimbs(this.buildLimb(30,27,220,1,5,1,bodyColour));
+        person.addlimbs(this.buildLimb(23,13,90,1,1,1,bodyColour));
 
 
-        person.addCircle(this.buildCircle(6,23,7, PersonColour.getPersonFaceColor(theameIndex),1));
-        person.addCircle(this.buildCircle(1,21,5,PersonColour.getPersonEyeColor(theameIndex),1));
-        person.addCircle(this.buildCircle(1,25,5,PersonColour.getPersonEyeColor(theameIndex),1));
-        person.addCrescent(this.buildHalfCircle(23,8,1,PersonColour.getPersonBodyColour(theameIndex),1));
+        person.addCircle(this.buildCircle(6,23,7,faceColour,1));
+        person.addCircle(this.buildCircle(1,21,5,eyeColour,1));
+        person.addCircle(this.buildCircle(1,25,5,eyeColour,1));
+        person.addCrescent(this.buildHalfCircle(23,8,1,faceColour,1));
 
         return person;
     }
