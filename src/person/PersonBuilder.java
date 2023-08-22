@@ -7,8 +7,8 @@ import common.drawer.Rectangle;
 
 public class PersonBuilder {
 
-    public Rectangle buildBody(int row, int col, int depth) {
-        return new Rectangle(9, 9, row, col, depth);
+    public Rectangle buildBody(int row, int col, int depth, String colour) {
+        return new Rectangle(9, 9, row, col, depth, colour);
     }
 
 
@@ -27,23 +27,23 @@ public class PersonBuilder {
         return  crescent;
 
     }
-    public Person buildPerson(){
+    public Person buildPerson(int theameIndex){
         Person person = new Person();
 
 //        person.addBody(this.buildBody(10,18,1));
-        person.addBody(this.buildBody(15,19,1));
+        person.addBody(this.buildBody(15,19,1, PersonColour.getPersonFaceColor(theameIndex)));
 
-        person.addlimbs(this.buildLimb(14,12,30,1,5,1,PersonColour.getPersonFaceColor()));
-        person.addlimbs(this.buildLimb(28,15,320,1,5,1,PersonColour.getPersonFaceColor()));
-        person.addlimbs(this.buildLimb(19,24,150,1,5,1,PersonColour.getPersonFaceColor()));
-        person.addlimbs(this.buildLimb(30,27,220,1,5,1,PersonColour.getPersonFaceColor()));
-        person.addlimbs(this.buildLimb(23,13,90,1,1,1,PersonColour.getPersonFaceColor()));
+        person.addlimbs(this.buildLimb(14,12,30,1,5,1,PersonColour.getPersonBodyColour(theameIndex)));
+        person.addlimbs(this.buildLimb(28,15,320,1,5,1,PersonColour.getPersonBodyColour(theameIndex)));
+        person.addlimbs(this.buildLimb(19,24,150,1,5,1,PersonColour.getPersonBodyColour(theameIndex)));
+        person.addlimbs(this.buildLimb(30,27,220,1,5,1,PersonColour.getPersonBodyColour(theameIndex)));
+        person.addlimbs(this.buildLimb(23,13,90,1,1,1,PersonColour.getPersonBodyColour(theameIndex)));
 
 
-        person.addCircle(this.buildCircle(6,23,7, PersonColour.getPersonFaceColor(),1));
-        person.addCircle(this.buildCircle(1,21,5,PersonColour.getPersonEyeColor(),1));
-        person.addCircle(this.buildCircle(1,25,5,PersonColour.getPersonEyeColor(),1));
-        person.addCrescent(this.buildHalfCircle(23,8,1,PersonColour.getPersonMouthColor(),1));
+        person.addCircle(this.buildCircle(6,23,7, PersonColour.getPersonFaceColor(theameIndex),1));
+        person.addCircle(this.buildCircle(1,21,5,PersonColour.getPersonEyeColor(theameIndex),1));
+        person.addCircle(this.buildCircle(1,25,5,PersonColour.getPersonEyeColor(theameIndex),1));
+        person.addCrescent(this.buildHalfCircle(23,8,1,PersonColour.getPersonBodyColour(theameIndex),1));
 
         return person;
     }

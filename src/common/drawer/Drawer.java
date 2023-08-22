@@ -1,8 +1,7 @@
 package common.drawer;
 
 import common.Canvas;
-import last.tree.Leaf;
-import last.tree.TreeColour;
+import tree.Leaf;
 
 import java.util.Collection;
 import java.util.Iterator;
@@ -42,7 +41,9 @@ public class Drawer {
 
         for(int trow = rectangle.getRow(); trow < rectangle.getRow() + rectangle.getHeight(); ++trow) {
             for(int tcol = rectangle.getCol(); tcol < rectangle.getCol() + rectangle.getWidth(); ++tcol) {
-                canvas.getCanvas()[trow][tcol] = TreeColour.getTrunckColour();
+                int theameIndex =0;
+//                canvas.getCanvas()[trow][tcol] = TreeColour.getTrunckColour(theameIndex);
+                canvas.getCanvas()[trow][tcol] = rectangle.getColour();
 
             }
         }
@@ -58,8 +59,9 @@ public class Drawer {
                 double offset = (double)t * 0.5;
                 int lcol = (int)Math.round((double) line.getCol() + (double)i * Math.cos(radians) + offset * Math.sin(radians));
                 int lrow = (int)Math.round((double) line.getRow() + (double)i * Math.sin(radians) - offset * Math.cos(radians));
-                canvas.getCanvas()[lrow][lcol] = TreeColour.getBranchColour();
-
+                int theameIndex = 0;
+//                canvas.getCanvas()[lrow][lcol] = TreeColour.getBranchColour(theameIndex);
+                canvas.getCanvas()[lrow][lcol] = line.getColour();
             }
         }
     }

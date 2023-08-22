@@ -37,6 +37,10 @@ public class Line extends Shape {
             return this.row;
         }
 
+
+    public String getColour() {
+        return colour;
     }
+}
 
 
