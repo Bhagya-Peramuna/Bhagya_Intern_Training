@@ -11,13 +11,13 @@ public class TreeBuilder {
             return new Rectangle(9, 9, row, col, depth,colour);
         }
 
-        public Line buildBranch(int row, int col, int angle, int thickness, int length, int depth,String colour) {
+        public Line buildBranch(int row, int col, int angle, int thickness, int length, int depth, String colour) {
             Line line = new Line(row, col, angle, thickness, length, depth,colour);
             return line;
         }
 
         public Leaf buildLeaf(int col, int row, int depth, String colour) {
-            Leaf leaf1 = new Leaf( row, col,  colour,depth,3,3);
+            Leaf leaf1 = new Leaf( row, col,  colour,depth,3,3,0);
             return leaf1;
         }
 

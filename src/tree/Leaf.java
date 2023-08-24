@@ -7,8 +7,9 @@ public class Leaf extends Shape {
         private int height;
 
         private String color;
+        private int radius ;
 
-        public Leaf(int row, int col, String color, int depth,int height,int width) {
+        public Leaf(int row, int col, String color, int depth,int height,int width, int radius) {
             super(row, col, depth);
             this.row = row;
             this.col = col;
@@ -16,6 +17,7 @@ public class Leaf extends Shape {
             this.depth = depth;
             this.height = height;
             this.width = width;
+            this.radius = radius;
         }
 
         public int getHeight() {
@@ -37,4 +39,8 @@ public class Leaf extends Shape {
       public int getWidth() {
             return this.width;
         }
+
+    public int getRadius() {
+        return radius;
     }
+}

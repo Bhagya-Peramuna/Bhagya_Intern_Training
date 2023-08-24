@@ -5,6 +5,9 @@ import common.drawer.Crescent;
 import common.drawer.Line;
 import common.drawer.Rectangle;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 public class PersonBuilder {
 
     public Rectangle buildBody(int row, int col, int depth, String colour) {
@@ -12,7 +15,7 @@ public class PersonBuilder {
     }
 
 
-    public Line buildLimb(int row, int col, int angle, int thickness, int length, int depth,String colour) {
+    public Line buildLimb(int row, int col, int angle, int thickness, int length, int depth, String colour) {
         Line line = new Line(row, col, angle, thickness, length, depth,colour);
         return line;
     }
@@ -28,7 +31,9 @@ public class PersonBuilder {
 
     }
     public Person buildPerson(String faceColour, String eyeColour, String bodyColour){
-        Person person = new Person();
+        Collection<Circle>circle = new ArrayList<>();
+        Collection<Crescent> crescent = new ArrayList<>();
+        Person person = new Person(circle,crescent);
 
 //        person.addBody(this.buildBody(10,18,1));
         person.addBody(this.buildBody(15,19,1, bodyColour));

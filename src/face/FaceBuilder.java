@@ -3,6 +3,9 @@ package face;
 import common.drawer.Circle;
 import common.drawer.Crescent;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 public class FaceBuilder {
     public Circle buildCircle(int radius, int centerX, int centerY, String colour, int depth){
         Circle circle = new Circle(centerX,centerY,radius,depth,colour);
@@ -14,8 +17,10 @@ public class FaceBuilder {
         return  crescent;
     }
 
-    public SmileyFace buildSmileyFace(String faceColor, String eyeColor, String mouthColor){
-        SmileyFace smileyFace= new SmileyFace();
+    public  SmileyFace buildSmileyFace(String faceColor, String eyeColor, String mouthColor){
+         Collection<Circle>circle = new ArrayList<>();
+         Collection<Crescent> crescent = new ArrayList<>();
+        SmileyFace smileyFace= new SmileyFace(circle,crescent);
 
         smileyFace.addCircle(this.buildCircle(10,25,15,faceColor,1));
 

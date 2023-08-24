@@ -9,6 +9,15 @@ public class Line extends Shape {
         private int angle;
         private int thickness;
 
+//    public Line(int row, int col, int length, int angle, int thickness, int depth, String colour) {
+//        super(row, col, depth);
+//        this.length = length;
+//        this.angle = angle;
+//        this.thickness = thickness;
+//        this.colour = colour;
+//    }
+
+
         public Line(int row, int col, int angle, int thickness, int length, int depth, String colour) {
             super(row, col, depth);
             this.length = length;
