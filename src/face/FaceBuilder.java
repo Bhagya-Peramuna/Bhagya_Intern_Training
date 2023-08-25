@@ -31,4 +31,19 @@ public class FaceBuilder {
 
         return  smileyFace;
     }
+
+    public SmileyFace buildFace2D(String faceColor, String eyeColor, String mouthColor) {
+//        face.FaceBuilder builder = new face.FaceBuilder();
+        Collection<Circle> circles = new ArrayList<>();
+
+        Collection<Crescent> crescents = new ArrayList<>();
+        SmileyFace face = new SmileyFace( circles, crescents);
+
+        face.addCircle(this.buildCircle(25, 100, 150, faceColor, 1));
+        face.addCircle(this.buildCircle(4, 150, 200, eyeColor, 1));
+        face.addCircle(this.buildCircle(4, 250, 200, eyeColor, 1));
+        face.addCrescent(this.buildHalfCircle(230, 300, 50, mouthColor, 150));
+
+        return face;
+    }
 }

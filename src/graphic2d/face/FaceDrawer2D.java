@@ -10,14 +10,14 @@ import java.awt.geom.Arc2D;
 import java.util.Collection;
 
 
-public class FaceDrawer extends JPanel{
+public class FaceDrawer2D extends JPanel{
 
         private Collection<Shape> circles;
 
         private Collection<Shape> crescent;
 
         private final int gridSize = 100;
-        public FaceDrawer(Collection<Shape> circles, Collection<Shape> crescent) {
+        public FaceDrawer2D(Collection<Shape> circles, Collection<Shape> crescent) {
             this.circles = circles;
             this.crescent = crescent;
 

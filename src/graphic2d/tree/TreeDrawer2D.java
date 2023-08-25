@@ -1,25 +1,26 @@
 package graphic2d.tree;//package graphic2d.tree;
 
-import common.drawer.Shape;
+import common.drawer.Circle;
 import common.drawer.Line;
 import common.drawer.Rectangle;
-import tree.Leaf;
-
+import common.drawer.Shape;
 
 import javax.swing.*;
 import java.awt.*;
 import java.util.Collection;
 
-public class DrawerGUI extends JPanel {
+public class TreeDrawer2D extends JPanel {
 
     private Collection<Shape> branches;
     private Collection<Shape> leaves;
     private Collection<Shape> trunks;
+//    private Collection<Shape> circle;
     private final int gridSize = 100;
-    public DrawerGUI(Collection<Shape> branches, Collection<Shape> leaves, Collection<Shape> trunks) {
+    public TreeDrawer2D(Collection<Shape> branches, Collection<Shape> leaves, Collection<Shape> trunks) {
         this.branches = branches;
         this.leaves = leaves;
         this.trunks = trunks;
+//        this.circle = circle;
     }
 
 
@@ -42,7 +43,8 @@ public class DrawerGUI extends JPanel {
         if (trunks != null) {
             for (Shape trunk : trunks) {
                 Rectangle rectangle = (Rectangle) trunk;
-                g2d.setColor(Color.magenta);
+//                System.out.println("\n height"+getHeight());
+//                g2d.setColor(Color.magenta);
                 g2d.fillRect(rectangle.getCol(), rectangle.getRow(), rectangle.getWidth(), rectangle.getHeight());
             }
         }
@@ -52,7 +54,7 @@ public class DrawerGUI extends JPanel {
                 Line line = (Line) branch;
                 g2d.setColor(Color.magenta);
                 g2d.setStroke(new BasicStroke(line.getThickness()));
-                System.out.println("Line angle: " + line.getRow());
+
 
                 double angleInRadians = Math.toRadians(line.getAngle());
                 int endX = line.getCol() + (int) (line.getLength() * Math.cos(angleInRadians));
@@ -64,12 +66,30 @@ public class DrawerGUI extends JPanel {
 
         if (leaves != null) {
             for (Shape leaf : leaves) {
-                Leaf l = (Leaf) leaf;
-                g2d.setColor(new Color(0, 128, 0));
+                Circle l = (Circle) leaf;
+                System.out.println("Line angle: " + leaf.getRow());
+                if(l.getRadius()==4){
+                    g2d.setColor(Color.yellow);
+                }else
+                 g2d.setColor(new Color(0, 128, 0));
                 int leafSize = (int) (10 * l.getRadius());
                 g2d.fillOval(l.getCol(), l.getRow(), leafSize, leafSize);
             }
         }
+
+
+//        if (circle != null) {
+//            for (Shape circle : circle) {
+//                Circle l = (Circle) circle;
+//                if(l.getRadius()==4){
+//                    g2d.setColor(Color.yellow);
+//                }else
+//                    g2d.setColor(Color.GRAY);
+//                int leafSize = (int) (10 * l.getRadius());
+//                g2d.fillOval(l.getCol(), l.getRow(), leafSize, leafSize);
+//            }
+//        }
+
     }
 
 

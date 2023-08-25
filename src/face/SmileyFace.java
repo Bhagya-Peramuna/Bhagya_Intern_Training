@@ -12,7 +12,7 @@ import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class SmileyFace implements java.awt.Shape {
+public class SmileyFace implements java.awt.Shape  {
 
     private Collection<Shape>circle = new ArrayList<>();
     private Collection<Shape> crescent = new ArrayList<>();
@@ -87,42 +87,5 @@ public class SmileyFace implements java.awt.Shape {
     public PathIterator getPathIterator(AffineTransform at, double flatness) {
         return null;
     }
-//    public BufferedImage draw(int width, int height) {
-//        // Create a BufferedImage
-//        BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
-//        Graphics2D g = image.createGraphics();
-//
-//        // Clear the image with a background color (white in this case)
-//        g.setColor(Color.WHITE);
-//        g.fillRect(0, 0, width, height);
-//
-//        // Iterate through circles and draw them
-//        for (common.drawer.Shape circle : circle) {
-//            if (circle instanceof Circle) {
-//                // Draw the circle using AWT/Swing graphics
-//                Circle c = (Circle) circle;
-//                g.setColor(Color.decode(c.getColour()));
-//                g.fillOval(c.getCol(), c.getRow(), c.getRadius() * 2, c.getRadius() * 2);
-//            }
-//        }
-//
-//        // Iterate through crescents and draw them
-//        for (Shape crescent : crescent) {
-//            if (crescent instanceof Crescent) {
-//                // Draw the crescent using AWT/Swing graphics
-//                Crescent c = (Crescent) crescent;
-//                g.setColor(Color.decode(c.getColour()));
-//                // Implement logic to draw crescent here
-//            }
-//        }
-//
-//        // Dispose the graphics context
-//        g.dispose();
-//
-//        return image;
-//    }
-
-
-
 
 }

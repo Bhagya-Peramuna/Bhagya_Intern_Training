@@ -1,3 +1,26 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+### IntelliJ IDEA ###
+.idea/
+out/
+Class diagram.puml
+!**/src/main/**/out/
+!**/src/test/**/out/
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cachebin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+### NetBeans ###
+/nbproject/private//nbbuild//dist//nbdist//
+.nb-gradle/
+### VS Code ###
+.vscode/
+### Mac OS ###
+.DS_Store

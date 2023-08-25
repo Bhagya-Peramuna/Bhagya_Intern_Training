@@ -10,12 +10,12 @@ import java.awt.*;
 import java.awt.geom.Arc2D;
 import java.util.Collection;
 
-public class PersonDrawer extends JPanel {
+public class PersonDrawer2D extends JPanel {
     private Collection<Shape> branches;
     private Collection<Shape> circle;
     private Collection<Shape> cresent;
 //, Collection<Shape> leaves, Collection<Shape> trunks
-    public PersonDrawer(Collection<Shape> branches, Collection<Shape> circle, Collection<Shape> cresent) {
+    public PersonDrawer2D(Collection<Shape> branches, Collection<Shape> circle, Collection<Shape> cresent) {
         this.branches = branches;
         this.circle = circle;
         this.cresent = cresent;

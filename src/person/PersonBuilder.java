@@ -53,4 +53,33 @@ public class PersonBuilder {
         return person;
     }
 
+
+
+    public static Person buildPerson2D(String faceColour, String eyeColour, String bodyColour) {
+
+        PersonBuilder bil = new PersonBuilder();
+
+        Collection<Crescent> cresent = new ArrayList<>();
+        Collection<Circle> circle = new ArrayList<>();
+        Collection<Line> branch = new ArrayList<>();
+
+        Person per = new Person(circle,cresent,branch);
+
+        per.addlimbs(bil.buildLimb(300,300,90,3,40,1,bodyColour));
+        per.addlimbs(bil.buildLimb(300,340,90,30,100,1,bodyColour));
+        per.addlimbs(bil.buildLimb(220,300,50,5,100,1,bodyColour));
+        per.addlimbs(bil.buildLimb(290,450,120,5,100,1,bodyColour));
+        per.addlimbs(bil.buildLimb(310,450,50,5,100,1,bodyColour));
+        per.addlimbs(bil.buildLimb(310,380,320,5,100,1,bodyColour));
+
+
+
+        per.addCircle(bil.buildCircle(20,200,100,faceColour,1));
+        per.addCircle(bil.buildCircle(4,230,130,  eyeColour,1));
+        per.addCircle(bil.buildCircle(4,330,130,  eyeColour,1));
+        per.addCrescent(bil.buildHalfCircle(300,200,14, bodyColour,2));
+
+        return per;
+    }
+
 }

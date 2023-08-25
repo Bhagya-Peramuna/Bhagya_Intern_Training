@@ -1,0 +1,232 @@
+@startuml
+class tree.Tree {
+- Collection<Shape> lines
+- Collection<Shape> leaves
+- Collection<Shape> rectangles
+- Collection<Shape> circles
++ void addBranch(Shape)
++ void addCircle(Shape)
++ Collection<Shape> getBranches()
++ Collection<Shape> getCircles()
++ void addLeaf(Shape)
++ Collection<Shape> getLeaves()
++ void addTrunk(Shape)
++ Collection<Shape> getTrunks()
+}
+class common.drawer.Circle {
+# int radius
+# String colour
++ int getRadius()
++ String getColour()
+}
+class person.PersonColourTheme {
++ String bodyBrownTheme1
++ String bodyLightGreenTheme2
++ String bodyColourTheme3
++ String faceYellowTheme1
++ String faceDarkBlueTheme2
++ String faceColourTheme3
++ String eyeDarkGreenTheme1
++ String eyeLightBlueTheme2
++ String eyeColourTheme3
+}
+class face.FaceBuilder {
++ Circle buildCircle(int,int,int,String,int)
++ Crescent buildHalfCircle(int,int,int,String,int)
++ SmileyFace buildSmileyFace(String,String,String)
++ SmileyFace buildFace2D(String,String,String)
+}
+class common.drawer.Shape {
+# int col
+# int row
+# {static} int depth
++ int getCol()
++ int getRow()
++ {static} int getDepth()
+}
+class face.FaceColourTheme {
++ String faceYellowTheme1
++ String faceDarkBlueTheme2
++ String faceColourTheme3
++ String eyeLightBlueTheme1
++ String eyeLightRedTheme2
++ String eyeColourTheme3
++ String mouthRedTheme1
++ String mouthGreenTheme2
++ String mouthColourTheme3
+}
+class common.drawer.Drawer2D {
+- Collection<Shape> circles
+- Collection<Shape> crescents
+- Collection<Shape> branches
+- Collection<Shape> trunks
+- int gridSize
+# void paintComponent(Graphics)
+}
+class face.FaceApplication {
++ {static} void main(String[])
+}
+class tree.Leaf {
+- int width
+- int height
+- String color
+- int radius
++ int getHeight()
++ int getRow()
++ int getCol()
++ String getColor()
++ int getWidth()
++ int getRadius()
+}
+class person.Person {
+- Collection<Shape> body
+- Collection<Shape> limbs
++ void addBody(Shape)
++ void addlimbs(Shape)
++ Collection<Shape> getBody()
++ Collection<Shape> getLimbs()
+}
+class graphic2d.face.FaceApplication {
++ {static} void main(String[])
+}
+class common.drawer.Line {
+- String colour
+- int length
+- int angle
+- int thickness
++ int getLength()
++ int getAngle()
++ int getThickness()
++ int getCol()
++ int getRow()
++ String getColour()
+}
+class graphic2d.person.PersonApplication {
++ {static} void main(String[])
+}
+class person.PersonMain {
++ {static} void main(String[])
+}
+class tree.TreeApplication {
++ {static} void main(String[])
+}
+class graphic2d.face.FaceDrawer2D {
+- Collection<Shape> circles
+- Collection<Shape> crescent
+- int gridSize
+# void paintComponent(Graphics)
+}
+class graphic2d.tree.TreeApplication {
++ {static} void main(String[])
+}
+class common.Canvas {
++ String[][] grid
++ void initializeGrid(int,int)
++ void displayBoarder(int,int)
++ String[][] getCanvas()
+}
+class graphic2d.tree.TreeDrawer2D {
+- Collection<Shape> branches
+- Collection<Shape> leaves
+- Collection<Shape> trunks
+- int gridSize
+# void paintComponent(Graphics)
+}
+class face.SmileyFace {
+- Collection<Shape> circle
+- Collection<Shape> crescent
++ void addCircle(Shape)
++ Collection<Shape> getCircle()
++ void addCrescent(Shape)
++ Collection<Shape> getCrescent()
++ Rectangle getBounds()
++ Rectangle2D getBounds2D()
++ boolean contains(double,double)
++ boolean contains(Point2D)
++ boolean intersects(double,double,double,double)
++ boolean intersects(Rectangle2D)
++ boolean contains(double,double,double,double)
++ boolean contains(Rectangle2D)
++ PathIterator getPathIterator(AffineTransform)
++ PathIterator getPathIterator(AffineTransform,double)
+}
+class common.drawer.Rectangle {
+- int width
+- int height
+- String colour
++ int getWidth()
++ int getHeight()
++ int getRow()
++ int getCol()
++ String getColour()
+}
+class graphic2d.person.PersonDrawer2D {
+- Collection<Shape> branches
+- Collection<Shape> circle
+- Collection<Shape> cresent
+# void paintComponent(Graphics)
+}
+class tree.TreeBuilder {
++ Rectangle buildTrunk(int,int,int,int,int,String)
++ Line buildBranch(int,int,int,int,int,int,String)
++ Leaf buildLeaf(int,int,int,String)
++ Circle buildCircle(int,int,int,String,int)
++ Tree buildTree(String,String,String,String)
++ {static} Tree buildTree2D(String,String,String,String)
+}
+class common.drawer.Drawer {
++ {static} Canvas canvas
++ void draw(Collection<Shape>)
++ void displayframe()
++ {static} void drawRectangleOnCanvas(Rectangle)
++ {static} void drawLineOnCanvas(Line)
++ {static} void drawLeafOnCanvas(Leaf)
++ {static} void drawCircleOnCanvas(Circle)
++ {static} void drawHalfCircleOnCanvas(Crescent)
+# {static} void plotPixel(String[][],int,int,String)
+}
+class person.PersonBuilder {
++ Rectangle buildBody(int,int,int,String)
++ Line buildLimb(int,int,int,int,int,int,String)
++ Circle buildCircle(int,int,int,String,int)
++ Crescent buildHalfCircle(int,int,int,String,int)
++ Person buildPerson(String,String,String)
++ {static} Person buildPerson2D(String,String,String)
+}
+class common.drawer.Crescent {
+- int radius
+- String colour
+- int innerRadius
++ int getRadius()
++ String getColour()
++ int getCol()
++ int getRow()
+}
+class tree.TreeColourTheme {
++ String trunckBrownTheme1
++ String trunckPurpleTheme2
++ String trunckColourTheme3
++ String branchBrownTheme1
++ String branchPurpleTheme2
++ String branchColourTheme3
++ String leafLightGreenTheme1
++ String leafLightBlueTheme2
++ String leafColour1Theme3
++ String leafDarkGreenTheme1
++ String leafDarkBlueTheme2
++ String leafColour2Theme3
+}
+
+
+common.drawer.Shape <|-- common.drawer.Circle
+common.drawer.JPanel <|-- common.drawer.Drawer2D
+common.drawer.Shape <|-- tree.Leaf
+face.SmileyFace <|-- person.Person
+common.drawer.Shape <|-- common.drawer.Line
+graphic2d.face.JPanel <|-- graphic2d.face.FaceDrawer2D
+graphic2d.tree.JPanel <|-- graphic2d.tree.TreeDrawer2D
+common.drawer.Shape <|.. face.SmileyFace
+common.drawer.Shape <|-- common.drawer.Rectangle
+graphic2d.person.JPanel <|-- graphic2d.person.PersonDrawer2D
+common.drawer.Shape <|-- common.drawer.Crescent
+@enduml
