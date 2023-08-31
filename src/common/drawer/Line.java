@@ -6,45 +6,37 @@ public class Line extends Shape {
 
     private  String colour;
     private int length;
-        private int angle;
-        private int thickness;
-
-//    public Line(int row, int col, int length, int angle, int thickness, int depth, String colour) {
-//        super(row, col, depth);
-//        this.length = length;
-//        this.angle = angle;
-//        this.thickness = thickness;
-//        this.colour = colour;
-//    }
+    private int angle;
+    private int thickness;
 
 
-        public Line(int row, int col, int angle, int thickness, int length, int depth, String colour) {
-            super(row, col, depth);
-            this.length = length;
-            this.angle = angle;
-            this.thickness = thickness;
-            this.colour =colour;
-        }
+    public Line(int row, int col, int angle, int thickness, int length, int depth, String colour) {
+        super(row, col);
+        this.length = length;
+        this.angle = angle;
+        this.thickness = thickness;
+        this.colour =colour;
+    }
 
-        public int getLength() {
-            return this.length;
-        }
+    public int getLength() {
+        return this.length;
+    }
 
-        public int getAngle() {
-            return this.angle;
-        }
+    public int getAngle() {
+        return this.angle;
+    }
 
-        public int getThickness() {
-            return this.thickness;
-        }
+    public int getThickness() {
+        return this.thickness;
+    }
 
-        public int getCol() {
-            return this.col;
-        }
+    public int getCol() {
+        return this.col;
+    }
 
-        public int getRow() {
-            return this.row;
-        }
+    public int getRow() {
+        return this.row;
+    }
 
 
     public String getColour() {

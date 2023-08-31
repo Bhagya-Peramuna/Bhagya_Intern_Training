@@ -14,24 +14,24 @@ public class Drawer {
     }
     public void draw(Collection<Shape> items) {
         Iterator var2 = items.iterator();
-        for (int z = Shape.getDepth(); z >= 0; z--) {
-            while (var2.hasNext()) {
-                Object item = var2.next();
-                if (item instanceof Rectangle) {
-                    drawRectangleOnCanvas((Rectangle) item);
-                } else if (item instanceof Line) {
-                    drawLineOnCanvas((Line) item);
-                }  else if (item instanceof Leaf) {
-                    drawLeafOnCanvas((Leaf) item);
-                }else if (item instanceof Circle) {
-                   drawCircleOnCanvas((Circle) item);
-                }else if (item instanceof Crescent) {
-                    drawHalfCircleOnCanvas((Crescent) item);
-                }
 
+        while (var2.hasNext()) {
+            Object item = var2.next();
+            if (item instanceof Rectangle) {
+                drawRectangleOnCanvas((Rectangle) item);
+            } else if (item instanceof Line) {
+                drawLineOnCanvas((Line) item);
+            }  else if (item instanceof Leaf) {
+                drawLeafOnCanvas((Leaf) item);
+            }else if (item instanceof Circle) {
+                drawCircleOnCanvas((Circle) item);
+            }else if (item instanceof Crescent) {
+                drawHalfCircleOnCanvas((Crescent) item);
             }
 
         }
+
+
     }
     public void displayframe() {
         this.canvas.displayBoarder(30, 60);

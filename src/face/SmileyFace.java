@@ -1,13 +1,10 @@
 package face;
 
-import common.drawer.Circle;
-import common.drawer.Crescent;
 import common.drawer.Shape;
 
 import java.util.ArrayList;
 import java.util.Collection;
 
-//public class SmileyFace implements java.awt.Shape  {
 public class SmileyFace  {
 
     private Collection<Shape>circle = new ArrayList<>();
@@ -29,7 +26,7 @@ public class SmileyFace  {
         return crescent;
     }
 
-    public SmileyFace(Collection<Circle> circles, Collection<Crescent> crescents) {
+    public SmileyFace(Collection<Shape> circles, Collection<Shape> crescents) {
         this.circle = circle;
         this.crescent = crescent;
     }

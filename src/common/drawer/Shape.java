@@ -4,12 +4,12 @@ public class Shape {
     protected int col;
     protected int row;
 
-    protected static int depth;
 
-    public Shape(int col, int row,int depth) {
+
+    public Shape(int col, int row) {
         this.col = col;
         this.row = row;
-       this.depth=depth;
+
 
     }
 
@@ -20,7 +20,5 @@ public class Shape {
     public int getRow() {
         return row;
     }
-    public static int getDepth() {
-        return depth;
-    }
+
 }

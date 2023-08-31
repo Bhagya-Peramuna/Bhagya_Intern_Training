@@ -5,12 +5,13 @@ public class Crescent extends Shape {
 
     private int radius;
     private String colour;
+    private int depth;
 
-    private int innerRadius = 2;
     public Crescent(int centerX, int centerY, int radius, String colour,int depth) {
-        super(centerX, centerY,depth);
+        super(centerX, centerY);
         this.radius = radius;
         this.colour = colour;
+        this.depth = depth;
     }
 
 
