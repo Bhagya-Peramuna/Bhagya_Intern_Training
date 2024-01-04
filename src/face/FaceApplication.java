@@ -1,6 +1,5 @@
 package face;
 
-
 import common.drawer.Drawer;
 
 public class FaceApplication {

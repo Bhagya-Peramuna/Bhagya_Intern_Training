@@ -1,7 +1,6 @@
 package face;
 
 import common.drawer.Shape;
-
 import java.util.ArrayList;
 import java.util.Collection;
 

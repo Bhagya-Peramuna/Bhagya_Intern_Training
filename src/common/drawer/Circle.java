@@ -1,7 +1,5 @@
 package common.drawer;
 
-
-
 public class Circle extends Shape  {
     protected int radius;
     protected  int depth;

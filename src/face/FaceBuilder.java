@@ -3,7 +3,6 @@ package face;
 import common.drawer.Circle;
 import common.drawer.Crescent;
 import common.drawer.Shape;
-
 import java.util.ArrayList;
 import java.util.Collection;
 
